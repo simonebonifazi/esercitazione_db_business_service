@@ -10,7 +10,7 @@ class Connection:
             config = json.load(k)
         self.connection = mysql.connector.connect(**config)
 
-    def executeQuery(self, query):
+    def execute_query(self, query):
         cursor = self.connection.cursor()
         cursor.execute(query)
         return cursor.fetchall()
