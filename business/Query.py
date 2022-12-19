@@ -1,14 +1,15 @@
 import mysql.connector
-from db.connection import Connection
-# from connection import Connection
+from connection import Connection
 
 
 class Query(Connection):
     def get_all_actors(self):
-        query = "select * from Actor"
-        Connection().execute_query(self, query)
+        query_actors = "select * from Actor"
+        Connection().execute_query(self, query_actors)
 
-        # Connection.execute_query(query)
+    def get_all_film(self):
+        query_films = "select * from Film"
+        Connection().execute_query(self, query_films)
 
 
 test = Query()
