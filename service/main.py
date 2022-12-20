@@ -4,11 +4,11 @@ import json
 
 class Connection:
 
-    def __init__(self, **config):
+    def __init__(self, ):
         self.connection = None
         with open('db/config.json', 'r') as k:
             config = json.load(k)
-        self.connection = mysql.connector.connect(**config)
+        self.connection = mysql.connector.connect()
 
     def execute_query(self, query):
         cursor = self.connection.cursor()

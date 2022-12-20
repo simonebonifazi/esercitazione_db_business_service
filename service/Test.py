@@ -1,5 +1,5 @@
 import mysql.connector
-from business.query import Query
+from business.Query import Query
 
 
 class Printer(Query):
@@ -12,6 +12,7 @@ class Printer(Query):
         result = Query().get_all_film(self)
         for i in result:
             print(i[0])
+
 
 printer = Printer()
 
